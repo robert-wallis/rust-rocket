@@ -6,10 +6,10 @@ build = "build.rs"
 
 [dependencies]
 
-itertools-num = "0.1"
-rand = "0.6"
-ggez = "0.4.4"
-structopt = "0.2.13"
+itertools-num = "~0.1"
+rand = "~0.6"
+ggez = "~0.4"
+structopt = "~0.2"
 
 [features]
 default = []
