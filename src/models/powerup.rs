@@ -1,4 +1,5 @@
 use rand::Rng;
+use rand::seq::SliceRandom;
 use geometry::{Collide, Point, Position, Size};
 
 const POWERUP_TTL: f32 = 10.0;
@@ -22,7 +23,7 @@ impl PowerupKind {
             PowerupKind::TimeSlow,
             PowerupKind::TripleShot,
         ];
-        *rng.choose(&choices).unwrap()
+        *choices.choose(rng).unwrap()
     }
 }
 

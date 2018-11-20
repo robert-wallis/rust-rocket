@@ -20,7 +20,7 @@ mod util;
 
 use ggez::event::{self, Keycode, Mod};
 use ggez::{Context, GameResult};
-use rand::ThreadRng;
+use rand::rngs::ThreadRng;
 use structopt::StructOpt;
 
 use controllers::{CollisionsController, Event, InputController, TimeController};
