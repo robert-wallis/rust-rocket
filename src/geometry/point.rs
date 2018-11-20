@@ -72,18 +72,6 @@ impl Add for Point {
     }
 }
 
-/// Implements the '+' operator for Point + f32
-impl Add<f32> for Point {
-    type Output = Point;
-
-    fn add(self, _rhs: f32) -> Point {
-        Point {
-            x: self.x + _rhs,
-            y: self.y + _rhs,
-        }
-    }
-}
-
 /// Implements the '-' operator for Point - Point
 impl Sub for Point {
     type Output = Point;
@@ -92,18 +80,6 @@ impl Sub for Point {
         Point {
             x: self.x - _rhs.x,
             y: self.y - _rhs.y,
-        }
-    }
-}
-
-/// Implements the '-' operator for Point - f32
-impl Sub<f32> for Point {
-    type Output = Point;
-
-    fn sub(self, _rhs: f32) -> Point {
-        Point {
-            x: self.x - _rhs,
-            y: self.y - _rhs,
         }
     }
 }
