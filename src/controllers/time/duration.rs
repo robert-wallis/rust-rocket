@@ -1,6 +1,7 @@
 use std::time::Duration;
 
 pub trait Seconds {
+    /// Seconds in decimal form. 1 second and 200 milliseconds = 1.2
     fn as_seconds(&self) -> f32;
 }
 
