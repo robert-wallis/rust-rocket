@@ -1,6 +1,7 @@
 mod timeout;
 mod timeout_queue;
 mod timer;
+mod duration;
 
 use std::{mem, f32};
 use std::time::Duration;
@@ -14,6 +15,7 @@ use models::{Bullet, Enemy, Particle, Powerup, PowerupKind};
 use util;
 
 use self::timer::Timer;
+use self::duration::Seconds;
 pub use self::timeout::Timeout;
 use self::timeout_queue::TimeoutQueue;
 
@@ -90,7 +92,7 @@ impl TimeController {
     ) {
         self.current_time += dt;
 
-        let dt = util::duration_to_seconds(dt);
+        let dt = dt.as_seconds();
         state.difficulty += dt / 100.0;
 
         // Check if we have any events that are scheduled to run, and if so, run them now
